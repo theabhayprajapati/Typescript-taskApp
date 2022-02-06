@@ -1,13 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Inputfield from './components/Inputfield';
 
-function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
-}
+const App: React.FC = () => {
+  const [todos, settodos] = useState<string | number>('')
+  return <div>
+    <h1>
+      Taskify
+    </h1>
+    <Inputfield todos={todos} settodos={settodos} />
+  </div>;
+};
 
 export default App;
